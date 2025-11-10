@@ -1,0 +1,227 @@
+@import 'tailwindcss';
+
+/* @link https://utopia.fyi/type/calculator?c=360,16,1.2,1240,16,1.24,6,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+
+@theme {
+    --color-primary-50: #F1F4FE;
+    --color-primary-100: #E2E9FD;
+    --color-primary-200: #C0CFFB;
+    --color-primary-300: #9AB2F9;
+    --color-primary-400: #6589F6;
+    --color-primary-500: #0D41E1;
+    --color-primary-600: #0B39C1;
+    --color-primary-700: #0B36B7;
+    --color-primary-800: #092C95;
+    --color-primary-900: #061F6A;
+    --color-primary-950: #041548;
+
+    /* Line height */
+    --leading-tighter: 1.15;
+
+    /* Font */
+    --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace
+}
+
+@layer base {
+    :root {
+        --fs-base: clamp(1rem, 1rem + 0vw, 1rem);
+        --fs-h4: clamp(1.2rem, 1.1836rem + 0.0727vw, 1.24rem);
+        --fs-h3: clamp(1.44rem, 1.4001rem + 0.1775vw, 1.5376rem);
+        --fs-h2: clamp(1.728rem, 1.6549rem + 0.3248vw, 1.9066rem);
+        --fs-h1: clamp(2.0736rem, 1.9547rem + 0.5284vw, 2.3642rem);
+        --fs-display-2: clamp(2.4883rem, 2.307rem + 0.806vw, 2.9316rem);
+        --fs-display-1: clamp(2.986rem, 2.7204rem + 1.1804vw, 3.6352rem);
+        --max-body-width: 1200px;
+    }
+
+    body {
+        font-size: var(--fs-base);
+        max-width: var(--max-body-width);
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--color-gray-900)
+    }
+
+    h1 {
+        font-size: var(--fs-h1);
+    }
+
+    h2 {
+        font-size: var(--fs-h2);
+    }
+
+    h3 {
+        font-size: var(--fs-h3);
+    }
+
+    h4 {
+        font-size: var(--fs-h4);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+        line-height: var(--leading-tighter);
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    pre {
+	overflow-x: auto;
+	white-space: pre;
+	border-radius: .125rem;
+	padding: .5rem;
+}
+
+pre code {
+	overflow: auto;
+	white-space: pre;
+	border-style: none;
+	padding-left: 0;
+	padding-right: 0
+}
+
+
+code {
+	overflow-wrap: break-word;
+}
+
+
+}
+
+@layer utilities {
+    .text-display-1 {
+        font-size: var(--fs-display-1);
+    }
+}
+
+
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/inter/inter-v20-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    src: url('/fonts/inter/inter-v20-latin-italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/inter/inter-v20-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-500italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    src: url('/fonts/inter/inter-v20-latin-500italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/inter/inter-v20-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-600italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    src: url('/fonts/inter/inter-v20-latin-600italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/inter/inter-v20-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-700italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/fonts/inter/inter-v20-latin-700italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/fonts/inter/inter-v20-latin-800.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-800italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 800;
+    src: url('/fonts/inter/inter-v20-latin-800italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* fira-code-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/fira-code/fira-code-v22-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

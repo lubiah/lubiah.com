@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "match": "^/garden/(?<slug>[\\w-]+)$",
+            "destination": "/blog/$<slug>",
+            "status": 301
+        }
+    ]
+}
