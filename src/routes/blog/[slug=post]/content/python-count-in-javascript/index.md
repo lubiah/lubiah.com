@@ -10,7 +10,7 @@ date: 2021-10-23
 tags:
   - python
   - javascript
-updated: 2021-10-23 20:45
+updated: 2021-10-23
 ---
 
 If you have a Python background, you are probably familiar with the `count` method in the list class.
