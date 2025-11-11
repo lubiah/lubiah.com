@@ -68,7 +68,7 @@
 			>
 			<span>•</span>
 			<!-- TODO: Show updated article date -->
-			 <!-- TODO: Show reading time -->
+			<!-- TODO: Show reading time -->
 		</div>
 	</div>
 	<div id="post-content"><post.Component /></div>

@@ -1,7 +1,7 @@
-// import { allPosts } from "$content-collections";
+import { allPosts } from "$content-collections";
 
-// export const load = async () => {
-//   return {
-//     posts: allPosts,
-//   };
-// };
+export const load = async () => {
+  return {
+    posts: allPosts,
+  };
+};
