@@ -44,7 +44,9 @@
                             <h2 class="text-lg font-medium mt-1">
                                 {post.title}
                             </h2>
-                            <p class="mt-1 text-gray-700">{post.description}</p>
+                            <p class="mt-1 text-gray-700 line-clamp-3">
+                                {post.description}
+                            </p>
                         </a>
                     </article>
                 </li>
