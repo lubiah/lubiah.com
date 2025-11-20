@@ -8,7 +8,7 @@
     const { data }: PageProps = $props();
 </script>
 
-<main class="md:mt-30">
+<main class="px-4 md:px-0 md:mt-30">
     <div>
         <h1 class="flex gap-x-1 mt-0"><PencilIcon /> Writings.</h1>
         <p class="text-gray-800 mt-2">
