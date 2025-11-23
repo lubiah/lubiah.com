@@ -110,6 +110,9 @@
     a {
         text-decoration: underline;
         text-decoration-style: wavy;
+        text-underline-offset: 3px;
+
+        text-decoration-color: var(--color-primary-600);
     }
 
     h1 + *,
@@ -122,6 +125,7 @@
     }
 
     figure {
+        margin-top: 1rem;
         & figcaption {
             @apply text-sm text-gray-800 mt-1;
         }

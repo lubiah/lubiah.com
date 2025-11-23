@@ -2,12 +2,32 @@
     import PencilIcon from "virtual:icons/stash/pencil-writing-light";
     import CalendarIcon from "~icons/material-symbols/calendar-month-outline-rounded";
     import ClockIcon from "~icons/heroicons/clock";
-
     import type { PageProps } from "./$types";
+    import Head from "svelte-seo";
+    import TagsSelector from "./components/TagsSelector";
 
+    const seo = {
+        title: "My Blog • Lubiah",
+        description:
+            "Thoughts and notes on code, life and everything in between",
+    };
     const { data }: PageProps = $props();
 </script>
 
+<Head
+    title={seo.title}
+    description={seo.description}
+    keywords="Lucretius Blog, Biah blog, software developer blog"
+    canonical="https://www.lubiah.com/blog"
+    openGraph={{
+        title: seo.title,
+        description: seo.description,
+    }}
+    twitter={{
+        title: seo.title,
+        description: seo.description,
+    }}
+/>
 <main class="px-4 md:px-0 md:mt-30">
     <div>
         <h1 class="flex gap-x-1 mt-0"><PencilIcon /> Writings.</h1>
@@ -16,18 +36,22 @@
         </p>
     </div>
     <div class="mt-20">
-        <ul>
+        <TagsSelector />
+        <ul class="mt-10">
             {#each data.posts as post}
                 {@const date = post.date?.toLocaleString("en-GB", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
                 })}
-                <li class="py-6 border-t border-gray-300">
-                    <article>
-                        <a class="no-underline" href="/blog/{post.slug}">
+                <li>
+                    <a
+                        class="no-underline py-6 border-t border-gray-300 hover:bg-gray-100 block"
+                        href="/blog/{post.slug}"
+                    >
+                        <article>
                             <div
-                                class="font-mono text-sm text-gray-700 flex gap-x-4"
+                                class="font-mono text-sm text-gray-700 flex gap-x-2"
                             >
                                 <span class="flex gap-x-1">
                                     <CalendarIcon />
@@ -44,11 +68,11 @@
                             <h2 class="text-lg font-medium mt-1">
                                 {post.title}
                             </h2>
-                            <p class="mt-1 text-gray-700 line-clamp-3">
+                            <p class="mt-1 text-gray-700 line-clamp-3 text-sm">
                                 {post.description}
                             </p>
-                        </a>
-                    </article>
+                        </article>
+                    </a>
                 </li>
             {/each}
         </ul>

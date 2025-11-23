@@ -18,8 +18,6 @@ I recently found [Windows Terminal](https://apps.microsoft.com/store/detail/wind
 
 However, after opening Cmder on Windows Terminal, I found a bug. There was a black background on the text.
 
----
-
 After searching, I finally found a solution.
 
 To solve this bug, follow the following steps.
