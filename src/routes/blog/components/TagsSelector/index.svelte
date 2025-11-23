@@ -51,9 +51,7 @@
     >
         {#each tags as tag}
             <li class="px-2.5 py-1 border border-gray-300 rounded">
-                <a class="no-underline" href="/blog/tags/{tag.slug}"
-                    >{tag.name}</a
-                >
+                <a class="no-underline" href="/">{tag.name}</a>
             </li>
         {/each}
     </ul>
