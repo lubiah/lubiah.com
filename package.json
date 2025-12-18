@@ -40,7 +40,7 @@
     "remark-emoji": "^5.0.2",
     "remark-gfm": "^4.0.1",
     "runed": "^0.36.0",
-    "storybook": "^10.0.8",
+    "storybook": "^10.1.10",
     "svelte": "^5.43.13",
     "svelte-check": "^4.3.4",
     "svelte-seo": "^2.0.0",
